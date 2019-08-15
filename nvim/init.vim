@@ -1,20 +1,16 @@
 call plug#begin('~/AppData/Local/nvim/plugged')
-" below are some vim plugin for demonstration purpose
 Plug 'joshdick/onedark.vim'
-" Plug 'iCyMind/NeoSolarized'
-
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'scrooloose/nerdTree'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 let g:python3_host_prog = 'C:\Users\marce\AppData\Local\Programs\Python\Python37-32\python.exe'
 let g:airline_theme='onedark'
-let g:deoplete#enable_at_startup = 1
 set tabstop=2
 set shiftwidth=2
 set backspace=2
@@ -23,10 +19,13 @@ set relativenumber
 set incsearch
 set hlsearch
 
+set nocompatible
 filetype plugin indent on
 syntax on
 colorscheme onedark
 
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
 "Tell to vim where is ctags file
 set tags=./tags;
@@ -64,8 +63,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Mapeamentos
-" Para o SHIFT + INSERT
-inoremap <silent> <S-Insert> <C-R>+ 
 " CTRL + J
 inoremap <silent><expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 " CTRL + K
