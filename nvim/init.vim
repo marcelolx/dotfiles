@@ -465,13 +465,6 @@ command! Retab2 :call utils#retabToTwoSpaces()
 "}}}
 
 " -----------------------------------------------------
-" 4.2 FZF {{{
-" -----------------------------------------------------
-let $FZF_DEFAULT_OPTS='--reverse'  " Also possible use like $FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border' 
-let g:fzf_layout = { 'window': 'enew' }
-"}}} 
-
-" -----------------------------------------------------
 " 4.3 NERDTree {{{
 " -----------------------------------------------------
 let g:NERDTreeMinimalUI=1
@@ -664,36 +657,6 @@ let g:yankring_window_height=15
 " 5.0 Plugin mappings
 " ======================================================================================================================
 "{{{
-" -----------------------------------------------------
-" 5.1 FZF {{{
-" -----------------------------------------------------
-
-" Search files recursively ([o]pen file)
-"nnoremap <silent> <leader>o :Files<CR>
-" Search git status (edited) [f]iles
-"nnoremap <silent> <leader>f :GFiles?<CR>
-" Search in local buffer [c]ommits
-"nnoremap <silent> <leader>c :BCommits<CR>
-" Search in all the project [C]ommits
-"nnoremap <silent> <leader>C :Commits<CR>
-" Search between open files - [b]uffers
-"nnoremap <silent> <leader>b :Buffers<CR>
-" Search in [l]ines on current buffer
-"nnoremap <silent> <leader>l :BLines<CR>
-" Search in all the opened buffers [L]ines
-"nnoremap <silent> <leader>L :Lines<CR>
-" Search in ultisnips [s]nippets
-"nnoremap <silent> <leader>s :Snippets<CR>
-" Search in [m]arks
-"nnoremap <silent> <leader>m :Marks<CR>
-" Search in edited files [h]istory
-"nnoremap <silent> <leader>h :History<CR>
-" Search in search [/] history
-"nnoremap <silent> <leader>/ :History/<CR>
-" Search in ag search
-"nnoremap <silent> <leader>a :Ag
-"}}}
-
 " -----------------------------------------------------
 " 5.2 Ultisnips {{{
 " -----------------------------------------------------
