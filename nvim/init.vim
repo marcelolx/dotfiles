@@ -183,7 +183,7 @@ scriptencoding utf-8                        " Set utf-8 as default script encodi
 set number                                  " Line numbers on
 set relativenumber                          " Relative numbers on
 set tabstop=2                               " Set tabstop size
-set shiftwidth=2                            " Set shiftwidth size
+set shiftwidth=2                            " Set  size
 set backspace=2                             " Set backspace size
 set showmode                                " Always show mode
 set showcmd                                 " Show commands as you type them
@@ -292,7 +292,7 @@ set wildignore+=tmp/**
 if has('nvim')
   let g:loaded_python_provider=1                        " Disable python 2 interface
   let g:python_host_skip_check=1                        " Skip python 2 host check
-  let g:python3_host_prog='C:\Users\marce\AppData\Local\Programs\Python\Python37-32\python.exe'      " Set python 3 host program
+  let g:python3_host_prog='C:\Users\marce\AppData\Local\Programs\Python\Python37\python.exe'      " Set python 3 host program
   set inccommand=nosplit                                " Live preview of substitutes and other similar commands
 endif
 "}}}
@@ -304,6 +304,8 @@ endif
 " For gem ctags use tpope/gem-ctags + vim-bundler
 " For project tags generation use gem install starscope
 " -----------------------------------------------------
+" Tell to vim where is ctags file
+set tags=./tags;
 "}}}
 
 " -----------------------------------------------------
@@ -380,7 +382,7 @@ nnoremap ,tg :GTags<CR>
 " -----------------------------------------------------
 
 " NERDTree wrapper
-" nnoremap <silent> <F1> :call utils#nerdWrapper()<CR>
+nnoremap <silent> <F1> :call utils#nerdWrapper()<CR>
 " Free
 " nnoremap <silent> <F2>
 " Free
@@ -473,6 +475,8 @@ let g:NERDTreeAutoDeleteBuffer=1
 let g:NERDTreeShowHidden=1
 let g:NERDTreeRespectWildIgnore=1
 let g:NERDTreeWinPos="left"
+" Abre o NerdTree direto no arquivo
+inoremap <silent> <Leader>v :NERDTreeFind<CR>
 "}}} 
 
 " -----------------------------------------------------
@@ -848,9 +852,6 @@ augroup END
 " autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 " autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
-" Tell to vim where is ctags file
-" set tags=./tags;
-
 " Abre o NERDTree sempre à esquerda
 " Deletes buffer of the file when file deleted with nerdtree
 " let NERDTreeAutoDeleteBuffer = 1
@@ -867,4 +868,3 @@ augroup END
 " inoremap <silent><expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 " Abre o NerdTree direto no arquivo
 " inoremap <silent> <Leader>v :NERDTreeFind<CR>
-
