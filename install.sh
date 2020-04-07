@@ -119,6 +119,17 @@ else
   exit
 fi
 
+#-----------------------------------------------------
+# Installing Ruby utilities
+#-----------------------------------------------------
+echo -n "[ NodeJS x10 ]"
+
+if ! command_exists node; then
+  curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+fi
+
+
 echo -n "[ Ruby -> Bundler - Solargraph ]"
 gem install bundler
 gem install solargraph
