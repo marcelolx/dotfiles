@@ -3,6 +3,9 @@
 # Don't continue on error
 set -e
 
+# Existing files won't be replaced
+REPLACE_FILES=false
+
 #-----------------------------------------------------
 # Functions and variables
 #-----------------------------------------------------
@@ -15,7 +18,6 @@ command_exists() {
 
 install_oh_my_zsh() {
   curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-  ln -sf $current_path/shell/martinus.zsh-theme ~/.oh-my-zsh/themes/martinus.zsh-theme
   echo "    Change your default shell to zsh"
   sudo chsh
 }
@@ -41,11 +43,11 @@ echo -n "[ zshrc ]"
 
 if [ ! -f ~/.zshrc ]; then
   echo "    Creating zshrc!"
-  ln -sf $current_path/shell/zshrc ~/.zshrc
+  # ln -sf $current_path/shell/zshrc ~/.zshrc
 elif $REPLACE_FILES; then
   echo "    Deleting old zshrc!"
-  rm ~/.zshrc
-  ln -sf $current_path/shell/zshrc ~/.zshrc
+  # rm ~/.zshrc
+  # ln -sf $current_path/shell/zshrc ~/.zshrc
 else
   echo "    Keeping existing zshrc!"
 fi
