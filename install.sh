@@ -103,6 +103,8 @@ fi
 #-----------------------------------------------------
 echo -n "[ Ruby - rbenv ]"
 
+sudo apt-get install -y git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev
+
 if command_exists rbenv; then
   if [ ! -f ~/.gemrc ]; then
     echo "   Creating gemrc, irbrc, rdebugrc!"
@@ -110,10 +112,14 @@ if command_exists rbenv; then
   else
     echo "   Keeping existing gemrc, irbrc, rdebugrc!"
   fi
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 else
   echo "    Installing, rbenv and rubybuild."
-  git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+  echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+  exec $SHELL
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
   echo "    Restart your shell and install ruby by rbenv install ruby-version"
   echo "    Then run this script again."
   exit
