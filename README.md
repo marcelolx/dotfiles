@@ -1,17 +1,7 @@
-# Steps to install NeoVim and Plugins on Windows
+# What's Included
 
-* Download latest release https://github.com/neovim/neovim/releases/
-* Unzip the package to any location. (My default is D:/Neovim)
-* Add `bin` folder to your PATH.
-* Install Python and then run `pip install pynvim`
-* Set Python3 path in `init.vim`
-* Install Ruby and then `gem install neovim`
-* Install NodeJS and then `yarn install -g neovim`
-* Open NeoVim and run :PlugInstall
-* Install CTags
-* Install FZF
-* Go to your project and run `nvim-qt`.
+* ZSH
+* Git
+* Ruby utilities
 
-### Ruby on Rails
 
-For ctags generation see `2.11 Ctags settings` in `init.vim`.
