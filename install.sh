@@ -36,6 +36,10 @@ if ! command_exists curl; then
   sudo apt-get install -y curl
 fi
 
+if ! command_exists yarn; then
+  sudo apt-get install -y yarn
+fi
+
 #-----------------------------------------------------
 # ZSH installation
 #-----------------------------------------------------
