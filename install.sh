@@ -47,11 +47,11 @@ echo -n "[ zshrc ]"
 
 if [ ! -f ~/.zshrc ]; then
   echo "    Creating zshrc!"
-  # ln -sf $current_path/shell/zshrc ~/.zshrc
+  ln -sf $current_path/shell/zshrc ~/.zshrc
 elif $REPLACE_FILES; then
   echo "    Deleting old zshrc!"
-  # rm ~/.zshrc
-  # ln -sf $current_path/shell/zshrc ~/.zshrc
+  rm ~/.zshrc
+  ln -sf $current_path/shell/zshrc ~/.zshrc
 else
   echo "    Keeping existing zshrc!"
 fi
@@ -122,7 +122,14 @@ else
   curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
   echo "    Restart your shell and install ruby by rbenv install ruby-version"
   echo "    Then run this script again."
-  exit
+  echo "Set ZSH your default SHELL"
+  echo "vim ~/.bashrc and put these lines before first case condition"
+  echo "######################"
+  echo "# if test -t 1; then #"
+  echo "#   exec zsh         #" 
+  echo "# fi                 #"
+  echo "######################"
+  return
 fi
 
 #-----------------------------------------------------
