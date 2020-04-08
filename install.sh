@@ -99,6 +99,12 @@ else
 fi
 
 #-----------------------------------------------------
+# Installing PostgreSQL Client
+#-----------------------------------------------------
+
+sudo apt-get install postgresql-client-common postgresql-client libpq-dev
+
+#-----------------------------------------------------
 # Installing Ruby utilities
 #-----------------------------------------------------
 echo -n "[ Ruby - rbenv ]"
