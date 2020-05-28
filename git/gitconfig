@@ -10,8 +10,15 @@
 [color]
     status = always
     ui = true
-[core]
-    editor = nvim
+[diff]
+	tool = vscode
+[difftool "vscode"]
+    cmd = code-insiders --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code-insiders --wait $MERGED
+    keepBackup = false
 [alias]
     a = add
     aa = add --all
