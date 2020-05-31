@@ -177,20 +177,21 @@ alias sselastic='sudo service elasticsearch start'
 # Applications
 # ------------------------------------------
 alias d='docker'
-alias v='nvim'
+alias v='vim'
 alias g='git'
 alias ta='tmux attach -t main || tmux new -s main'
 alias td='tmux detach'
 alias msql='mysql -uroot -p'
 # npm install -g http-server
 alias ws='http-server -c-1 -p 3333 -o'
+alias ci='code-insiders'
+alias c='code'
 
 # ------------------------------------------
 # Language specific
 # ------------------------------------------
 alias rb='ruby'
 alias js='node'
-alias composer="php /usr/local/bin/composer.phar"
 
 # ------------------------------------------
 # Other
