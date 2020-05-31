@@ -4,7 +4,7 @@
 set -e
 
 # Existing files won't be replaced
-REPLACE_FILES=false
+REPLACE_FILES=true
 
 #-----------------------------------------------------
 # Functions and variables
@@ -69,6 +69,9 @@ else
   install_oh_my_zsh
 fi
 
+# Custom Theme for ZSH
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
 #-----------------------------------------------------
 # Git (config, ignore)
 #-----------------------------------------------------
@@ -99,9 +102,17 @@ else
 fi
 
 #-----------------------------------------------------
+# Installing Powerline Fonts
+#-----------------------------------------------------
+
+echo "Installing Powerline Fonts"
+sudo apt-get install fonts-powerline
+
+#-----------------------------------------------------
 # Installing PostgreSQL Client
 #-----------------------------------------------------
 
+echo "Installing PostgreSQL Client"
 sudo apt-get install postgresql-client-common postgresql-client libpq-dev
 
 #-----------------------------------------------------
