@@ -5,6 +5,7 @@
     helper = /mnt/c/Environment/Git/mingw64/libexec/git-core/git-credential-manager.exe
 [core]
     excludesfile = ~/.gitignore
+    editor = vim
 [push]
     default = simple
 [color]
@@ -52,6 +53,7 @@
     unstage = reset HEAD --
     cfp = !git checkout $1 && git fetch origin $1 && git pull origin $1 && :
     cb = checkout -b
+    cma = commit --amend
 [github]
     user = marcelolx
 [branch]

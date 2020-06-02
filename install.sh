@@ -104,16 +104,29 @@ fi
 #-----------------------------------------------------
 # Installing Powerline Fonts
 #-----------------------------------------------------
-
-echo "Installing Powerline Fonts"
 sudo apt-get install fonts-powerline
 
 #-----------------------------------------------------
-# Installing PostgreSQL Client
+# Installing PostgreSQL
 #-----------------------------------------------------
+sudo apt-get install postgresql libpq-dev
 
-echo "Installing PostgreSQL Client"
-sudo apt-get install postgresql-client-common postgresql-client libpq-dev
+#-----------------------------------------------------
+# Installing Redis
+#-----------------------------------------------------
+sudo apt-get install redis-server
+
+#-----------------------------------------------------
+# Installing Direnv
+#-----------------------------------------------------
+sudo apt-get install direnv
+
+#-----------------------------------------------------
+# Installing Google Chrome
+#-----------------------------------------------------
+sudo apt install gdebi-core wget
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo gdebi google-chrome-stable_current_amd64.deb
 
 #-----------------------------------------------------
 # Installing Ruby utilities

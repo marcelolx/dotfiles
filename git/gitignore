@@ -71,3 +71,7 @@ tags
 default-gems
 .tern-project
 .tern-port
+
+# Direnv
+# ============================
+.envrc

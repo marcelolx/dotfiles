@@ -169,9 +169,11 @@ alias up='sudo apt update && sudo apt upgrade -y'
 # ------------------------------------------
 alias ss='sudo service'
 alias ssmysql='sudo service mysql start'
-alias sspgsql='sudo service postgresql start'
-alias ssredis='sudo service redis-server start'
-alias sselastic='sudo service elasticsearch start'
+alias sspgsstart='sudo service postgresql start'
+alias sspgsstop='sudo service postgresql stop'
+alias sspgsres='sudo service postgresql restart'
+alias ssredisstart='sudo service redis-server start'
+alias ssredisstop='sudo service redis-server stop'
 
 # ------------------------------------------
 # Applications
@@ -252,3 +254,6 @@ eval "$(rbenv init -)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Direnv hook
+eval "$(direnv hook zsh)"
