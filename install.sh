@@ -69,9 +69,6 @@ else
   install_oh_my_zsh
 fi
 
-# Custom Theme for ZSH
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-
 #-----------------------------------------------------
 # Git (config, ignore)
 #-----------------------------------------------------
