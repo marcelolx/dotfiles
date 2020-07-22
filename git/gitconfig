@@ -54,6 +54,7 @@
     cfp = !git checkout $1 && git fetch origin $1 && git pull origin $1 && :
     cb = checkout -b
     cma = commit --amend
+    rh = reset --hard
 [github]
     user = marcelolx
 [branch]
