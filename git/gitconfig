@@ -2,7 +2,7 @@
     name = Marcelo Lauxen
     email = marcelolauxen16@gmail.com
 [credential]
-    helper = /mnt/c/Environment/Git/mingw64/libexec/git-core/git-credential-manager.exe
+    helper = "/mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
 [core]
     excludesfile = ~/.gitignore
     editor = vim
