@@ -176,7 +176,6 @@ fi
 if command_exists ruby; then
   echo -n "[ Ruby -> Bundler - Solargraph ]"
   gem install bundler
-  gem install solargraph
 else
   rbenv install 2.6.6
   rbenv global 2.6.6
