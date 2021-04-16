@@ -1,6 +1,7 @@
 [user]
     name = Marcelo Lauxen
     email = marcelolauxen16@gmail.com
+    signingkey = 7B98E50D1D67556D
 [credential]
     helper = "/mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
 [core]
@@ -27,10 +28,10 @@
     di = diff
     ds = diff --staged
     dt = difftool --no-prompt
-    cmt = commit -m
-    ci = commit --verbose
-    cim = commit --verbose --reedit-message=HEAD --reset-author
-    amend = commit --amend --verbose
+    cmt = commit -S -m
+    ci = commit -S --verbose
+    cim = commit -S --verbose --reedit-message=HEAD --reset-author
+    amend = commit -S --amend --verbose
     co = checkout
     pl = pull
     p = push origin 
@@ -53,7 +54,7 @@
     unstage = reset HEAD --
     cfp = !git checkout $1 && git fetch origin $1 && git pull origin $1 && :
     cb = checkout -b
-    cma = commit --amend
+    cma = commit -S --amend
     rh = reset --hard
 [github]
     user = marcelolx
