@@ -142,14 +142,14 @@ if command_exists rbenv; then
   else
     echo "   Keeping existing gemrc, irbrc, rdebugrc!"
   fi
-  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
 else
   echo "    Installing, rbenv and rubybuild."
-  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-installer | bash
   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
   echo 'eval "$(rbenv init -)"' >> ~/.zshrc
   exec $SHELL
-  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
   echo "    Restart your shell and install ruby by rbenv install ruby-version"
   echo "    Then run this script again."
   echo "Set ZSH your default SHELL"
@@ -165,10 +165,10 @@ fi
 #-----------------------------------------------------
 # Installing Ruby utilities
 #-----------------------------------------------------
-echo -n "[ NodeJS x10 ]"
+echo -n "[ NodeJS x16 ]"
 
 if ! command_exists node; then
-  curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   sudo apt-get install -y nodejs
 fi
 
@@ -177,6 +177,6 @@ if command_exists ruby; then
   echo -n "[ Ruby -> Bundler - Solargraph ]"
   gem install bundler
 else
-  rbenv install 2.6.6
-  rbenv global 2.6.6
+  rbenv install 2.7.5
+  rbenv global 2.7.5
 fi

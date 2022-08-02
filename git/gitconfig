@@ -1,7 +1,6 @@
 [user]
     name = Marcelo Lauxen
     email = marcelolauxen16@gmail.com
-    signingkey = 7B98E50D1D67556D
 [credential]
     helper = "/mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
 [core]
