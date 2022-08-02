@@ -59,3 +59,7 @@
     user = marcelolx
 [branch]
     autosetuprebase = always
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
