@@ -180,3 +180,9 @@ else
   rbenv install 2.7.5
   rbenv global 2.7.5
 fi
+
+
+#-----------------------------------------------------
+# Installing Utility to set keyboard layout
+#-----------------------------------------------------
+sudo apt-get install x11-xkb-utils
