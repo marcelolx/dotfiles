@@ -1,6 +1,7 @@
 [user]
     name = Marcelo Lauxen
     email = marcelolauxen16@gmail.com
+    signingkey = BD3A690409D0E482
 [credential]
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager-core

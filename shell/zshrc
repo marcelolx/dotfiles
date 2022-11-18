@@ -270,4 +270,6 @@ export GPG_TTY=$(tty)
 export FLYCTL_INSTALL="/home/marcelolx/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
+export DEV_TLD_DOMAINS="test,localhost"
+
 setxkbmap br
